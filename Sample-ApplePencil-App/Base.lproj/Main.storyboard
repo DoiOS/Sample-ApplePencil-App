@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTk-JG-Ql6">
                                                 <rect key="frame" x="362" y="9" width="36" height="30"/>
                                                 <state key="normal" title="Clear">
-                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="didTapClearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5dT-46-MRR"/>
@@ -43,14 +43,36 @@
                                                     <constraint firstAttribute="height" constant="1" id="M45-Tn-ivF"/>
                                                 </constraints>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSN-56-PY9">
+                                                <rect key="frame" x="16" y="9" width="37" height="30"/>
+                                                <state key="normal" title="Undo">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="undo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8E1-u4-7I9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8I2-b9-uW1">
+                                                <rect key="frame" x="69" y="9" width="36" height="30"/>
+                                                <state key="normal" title="Redo">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="redo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jCk-70-GrK"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="tTk-JG-Ql6" secondAttribute="trailing" constant="16" id="1G6-bI-NOt"/>
                                             <constraint firstAttribute="trailing" secondItem="a8S-cI-GPz" secondAttribute="trailing" id="50f-ds-ol1"/>
                                             <constraint firstAttribute="height" constant="48" id="7xS-T4-LYE"/>
+                                            <constraint firstItem="OSN-56-PY9" firstAttribute="centerY" secondItem="4i9-sN-joz" secondAttribute="centerY" id="BCE-4a-8xv"/>
                                             <constraint firstAttribute="bottom" secondItem="a8S-cI-GPz" secondAttribute="bottom" id="Gib-jx-ca3"/>
+                                            <constraint firstItem="8I2-b9-uW1" firstAttribute="leading" secondItem="OSN-56-PY9" secondAttribute="trailing" constant="16" id="IKx-SW-fgs"/>
                                             <constraint firstItem="tTk-JG-Ql6" firstAttribute="centerY" secondItem="4i9-sN-joz" secondAttribute="centerY" id="KPP-LV-5os"/>
+                                            <constraint firstItem="OSN-56-PY9" firstAttribute="leading" secondItem="4i9-sN-joz" secondAttribute="leading" constant="16" id="Mqa-Fx-2qu"/>
+                                            <constraint firstItem="8I2-b9-uW1" firstAttribute="centerY" secondItem="4i9-sN-joz" secondAttribute="centerY" id="Xdx-MY-EtT"/>
                                             <constraint firstItem="a8S-cI-GPz" firstAttribute="leading" secondItem="4i9-sN-joz" secondAttribute="leading" id="r59-7A-4S1"/>
                                         </constraints>
                                     </view>
@@ -68,25 +90,25 @@
                                     <constraint firstItem="4i9-sN-joz" firstAttribute="leading" secondItem="DJf-kq-wA5" secondAttribute="leading" id="Mqs-kb-JYo"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtm-em-zwN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVW-wZ-yaL" customClass="CanvasView" customModule="Sample_ApplePencil_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="414" height="804"/>
-                                <color key="backgroundColor" red="1" green="0.9533560124732674" blue="0.73856896023018459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
+                                <color key="backgroundColor" red="1" green="0.96959501359759415" blue="0.61496788169883676" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yVW-wZ-yaL" firstAttribute="top" secondItem="DJf-kq-wA5" secondAttribute="bottom" id="03B-Q2-58A"/>
                             <constraint firstAttribute="trailing" secondItem="DJf-kq-wA5" secondAttribute="trailing" id="2Ty-oa-K5T"/>
-                            <constraint firstAttribute="trailing" secondItem="dtm-em-zwN" secondAttribute="trailing" id="EBf-ZU-rXP"/>
+                            <constraint firstAttribute="trailing" secondItem="yVW-wZ-yaL" secondAttribute="trailing" id="9h8-Rm-5u3"/>
                             <constraint firstItem="DJf-kq-wA5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="H0k-pz-n0P"/>
-                            <constraint firstItem="dtm-em-zwN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Po5-AK-MdP"/>
-                            <constraint firstItem="dtm-em-zwN" firstAttribute="top" secondItem="DJf-kq-wA5" secondAttribute="bottom" id="YAD-p8-SXM"/>
-                            <constraint firstAttribute="bottom" secondItem="dtm-em-zwN" secondAttribute="bottom" id="dxt-CM-BQa"/>
+                            <constraint firstAttribute="bottom" secondItem="yVW-wZ-yaL" secondAttribute="bottom" id="KHf-6r-nee"/>
+                            <constraint firstItem="yVW-wZ-yaL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kz5-1X-ffk"/>
                             <constraint firstItem="DJf-kq-wA5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yUN-h0-TKh"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="canvasView" destination="dtm-em-zwN" id="mZJ-ay-DBe"/>
+                        <outlet property="canvasView" destination="yVW-wZ-yaL" id="2FJ-lp-Igg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,9 +117,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

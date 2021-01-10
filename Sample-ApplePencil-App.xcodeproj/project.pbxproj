@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34CA256725AB23BE0057404D /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA256625AB23BE0057404D /* CanvasView.swift */; };
 		CEB9EE1125828526005B66C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9EE1025828526005B66C9 /* AppDelegate.swift */; };
 		CEB9EE1325828526005B66C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9EE1225828526005B66C9 /* SceneDelegate.swift */; };
 		CEB9EE1525828526005B66C9 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB9EE1425828526005B66C9 /* CanvasViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34CA256625AB23BE0057404D /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		CEB9EE0D25828526005B66C9 /* Sample-ApplePencil-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample-ApplePencil-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB9EE1025828526005B66C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEB9EE1225828526005B66C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CEB9EE1925828526005B66C9 /* Assets.xcassets */,
 				CEB9EE1B25828526005B66C9 /* LaunchScreen.storyboard */,
 				CEB9EE1E25828526005B66C9 /* Info.plist */,
+				34CA256625AB23BE0057404D /* CanvasView.swift */,
 			);
 			path = "Sample-ApplePencil-App";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				CEB9EE1525828526005B66C9 /* CanvasViewController.swift in Sources */,
 				CEB9EE1125828526005B66C9 /* AppDelegate.swift in Sources */,
+				34CA256725AB23BE0057404D /* CanvasView.swift in Sources */,
 				CEB9EE1325828526005B66C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,14 +291,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 72SA4N6XPK;
+				DEVELOPMENT_TEAM = 9X869773GM;
 				INFOPLIST_FILE = "Sample-ApplePencil-App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "sungmin.joo.Sample-ApplePencil-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sungmin.joo.Sample-ApplePencil-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
